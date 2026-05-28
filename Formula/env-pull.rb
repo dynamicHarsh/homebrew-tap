@@ -5,21 +5,21 @@
 class EnvPull < Formula
   desc "Universal Secrets Adapter"
   homepage "https://github.com/dynamicHarsh/env-pull"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.1/env-pull_0.1.1_darwin_amd64.tar.gz"
-      sha256 "855e000135fb4282409500a63befbe624d657f92b07f8d3eb4c4aab02f8895ce"
+      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.2/env-pull_0.1.2_darwin_amd64.tar.gz"
+      sha256 "034ebeeec7878c20510a8181eaf0da566fd5d4915898fd524383a5124c2ce068"
 
       define_method(:install) do
         bin.install "env-pull"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.1/env-pull_0.1.1_darwin_arm64.tar.gz"
-      sha256 "99c8b0b20cbf02236f63e55e2530d5a18955effc0b0acad6c1e834ce5adb3743"
+      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.2/env-pull_0.1.2_darwin_arm64.tar.gz"
+      sha256 "3e1022ef9cc311c3680ec8f6ee5100f3adf6738df3584ecf52d03b89b49595d5"
 
       define_method(:install) do
         bin.install "env-pull"
@@ -29,15 +29,15 @@ class EnvPull < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.1/env-pull_0.1.1_linux_amd64.tar.gz"
-      sha256 "e64e3e8fadc8764d314b592109f6ddf66f22826c87293eadf6919aa44ef69e79"
+      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.2/env-pull_0.1.2_linux_amd64.tar.gz"
+      sha256 "ad4cd70302ace9022d7cb85faec70c0d848eb5e105a14caed3e9e6f95f24e097"
       define_method(:install) do
         bin.install "env-pull"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.1/env-pull_0.1.1_linux_arm64.tar.gz"
-      sha256 "e6d823ceb43fb7a573a1da87e24b02e25355a7d0b585cc2a7e574fc8575ea681"
+      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.2/env-pull_0.1.2_linux_arm64.tar.gz"
+      sha256 "78a1b378d8b8ef23f98f20e54baf83f60d652caa906a2da36dad1bb6bad2f694"
       define_method(:install) do
         bin.install "env-pull"
       end
