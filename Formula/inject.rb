@@ -5,41 +5,45 @@
 class Inject < Formula
   desc "Universal Secrets Adapter"
   homepage "https://github.com/dynamicHarsh/env-pull"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.2/env-pull_0.1.2_darwin_amd64.tar.gz"
-      sha256 "034ebeeec7878c20510a8181eaf0da566fd5d4915898fd524383a5124c2ce068"
+      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.3/inject_0.1.3_darwin_amd64.tar.gz"
+      sha256 "784857722ab79b7fbbaa8c442a27aeb9286e292da964648eb6e27522b87b180f"
 
       define_method(:install) do
-        bin.install "env-pull" => "inject"
+        bin.install "inject"
+        bin.install_symlink "inject" => "env-pull"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.2/env-pull_0.1.2_darwin_arm64.tar.gz"
-      sha256 "3e1022ef9cc311c3680ec8f6ee5100f3adf6738df3584ecf52d03b89b49595d5"
+      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.3/inject_0.1.3_darwin_arm64.tar.gz"
+      sha256 "4d3305bc00c8b7ed790ae71b696209756a918ce535d4d60001e0d1e65e5425cc"
 
       define_method(:install) do
-        bin.install "env-pull" => "inject"
+        bin.install "inject"
+        bin.install_symlink "inject" => "env-pull"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.2/env-pull_0.1.2_linux_amd64.tar.gz"
-      sha256 "ad4cd70302ace9022d7cb85faec70c0d848eb5e105a14caed3e9e6f95f24e097"
+      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.3/inject_0.1.3_linux_amd64.tar.gz"
+      sha256 "22b1a4d23e3b9f68f0b847abe82149eba150bcdd65bf6f42435600dcfa72cc3d"
       define_method(:install) do
-        bin.install "env-pull" => "inject"
+        bin.install "inject"
+        bin.install_symlink "inject" => "env-pull"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.2/env-pull_0.1.2_linux_arm64.tar.gz"
-      sha256 "78a1b378d8b8ef23f98f20e54baf83f60d652caa906a2da36dad1bb6bad2f694"
+      url "https://github.com/dynamicHarsh/env-pull/releases/download/v0.1.3/inject_0.1.3_linux_arm64.tar.gz"
+      sha256 "5ec7335d0c527a51ffa28cd4553f892579a1902a972c1890476d234c6e0e22a6"
       define_method(:install) do
-        bin.install "env-pull" => "inject"
+        bin.install "inject"
+        bin.install_symlink "inject" => "env-pull"
       end
     end
   end
